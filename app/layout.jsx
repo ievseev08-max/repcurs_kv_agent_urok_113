@@ -39,6 +39,9 @@ export const metadata = {
     images: ['/images/design-concept.png'],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+  },
 };
 
 export default function RootLayout({ children }) {

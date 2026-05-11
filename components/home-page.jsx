@@ -30,6 +30,9 @@ import { CASE_CARD_IMAGES } from '@/lib/case-assets';
 
 const tg = process.env.NEXT_PUBLIC_TELEGRAM_URL || 'https://t.me/';
 const wa = process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://wa.me/';
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hello@example.com';
+const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN_URL || '#';
+const gitHub = process.env.NEXT_PUBLIC_GITHUB_URL || '#';
 
 const trustItems = [
   ['AI-системы', 'Архитектура и внедрение end-to-end', Cpu],
@@ -382,9 +385,9 @@ export function HomePage() {
             {[
               [Send, 'Telegram', tg],
               [MessageCircle, 'WhatsApp', wa],
-              [Mail, 'Email', 'mailto:hello@example.com'],
-              [Linkedin, 'LinkedIn', '#'],
-              [Github, 'GitHub', '#'],
+              [Mail, 'Email', `mailto:${contactEmail}`],
+              [Linkedin, 'LinkedIn', linkedIn],
+              [Github, 'GitHub', gitHub],
             ].map(([Icon, name, href]) => (
               <a key={name} href={href} className="mb-3 flex items-center justify-between rounded-2xl p-3 text-slate-200 hover:bg-white/[.06]">
                 <span className="flex items-center gap-3">
