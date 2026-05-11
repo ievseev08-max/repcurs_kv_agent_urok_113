@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #050816;
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+}
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+.bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.glass { background: rgba(255,255,255,.065); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(18px); }
+.gradient-text { background: linear-gradient(90deg,#49d7ff,#8b5cf6,#ffffff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-name { text-shadow: 0 0 45px rgba(73,215,255,.16); }
+.card-hover { transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+.card-hover:hover { transform: translateY(-6px); border-color: rgba(73,215,255,.45); background: rgba(255,255,255,.09); }

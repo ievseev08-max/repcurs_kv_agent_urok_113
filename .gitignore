@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+
+# локальный клон шаблона (не дублировать в репозитории)
+cursor-memory-bank/
